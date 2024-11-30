@@ -10,11 +10,12 @@ const App = () => {
   ]);
 
   const handleComplete = (id) => {
-    setTodos(
-      todos.map((item) =>
-        item.id === id ? { ...item, completed: true } : item
-      )
-    );
+    // setTodos(
+    //   todos.map((item) =>
+    //     item.id === id ? { ...item, completed: true } : item
+    //   )
+    // );
+    setTodos(todos.filter((item) => item.id != id));
   };
 
   return (
